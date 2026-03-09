@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghop Ghop On The Road</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--green:#36764d;
+--pink:#ff7eb3;
+--light:#F5BABB;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#fff;
+color:#333;
+}
+
+/* NAVBAR */
+
+nav{
+background:var(--green);
+padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+flex-wrap:wrap;
+}
+
+nav h1{
+font-size:20px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+min-height:80vh;
+background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px 20px;
+color:white;
+}
+
+.hero h2{
+font-size:42px;
+}
+
+.hero p{
+margin-top:10px;
+font-size:18px;
+}
+
+.hero button{
+margin-top:25px;
+padding:12px 30px;
+border:none;
+background:var(--pink);
+color:white;
+font-size:16px;
+border-radius:30px;
+cursor:pointer;
+}
+
+/* ABOUT */
+
+.about{
+padding:70px 5%;
+display:flex;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.about img{
+width:100%;
+max-width:450px;
+border-radius:15px;
+}
+
+.about-text{
+flex:1;
+min-width:260px;
+}
+
+.about-text h2{
+color:var(--green);
+margin-bottom:15px;
+}
+
+/* MENU */
+
+.menu{
+padding:70px 5%;
+background:var(--light);
+text-align:center;
+}
+
+.menu h2{
+color:var(--green);
+margin-bottom:40px;
+}
+
+.menu-items{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.item{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 12px rgba(0,0,0,0.08);
+}
+
+.item h3{
+color:var(--green);
+}
+
+.price{
+margin-top:10px;
+font-weight:bold;
+}
+
+/* GALLERY */
+
+.gallery{
+padding:70px 5%;
+text-align:center;
+}
+
+.gallery h2{
+color:var(--green);
+margin-bottom:40px;
+}
+
+.gallery-images{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.gallery-images img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* CONTACT */
+
+.contact{
+padding:70px 5%;
+background:var(--light);
+text-align:center;
+}
+
+.contact h2{
+color:var(--green);
+margin-bottom:30px;
+}
+
+.contact form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact input,
+.contact textarea{
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:14px;
+}
+
+.contact button{
+padding:12px;
+border:none;
+background:var(--green);
+color:white;
+border-radius:25px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:var(--green);
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.hero h2{
+font-size:30px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.about{
+flex-direction:column;
+text-align:center;
+}
+
+.gallery-images img{
+height:180px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>☕ Ghop Ghop On The Road</h1>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h2>Fresh Coffee On The Road</h2>
+
+<p>Sweet Bites • Good Vibes • Travel Cafe</p>
+
+<button onclick="scrollMenu()">View Menu</button>
+
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24">
+
+<div class="about-text">
+
+<h2>About Our Cafe</h2>
+
+<p>
+Ghop Ghop On The Road is a cozy travel cafe serving delicious coffee,
+fresh snacks and sweet treats for people on the go. Enjoy relaxing vibes
+and great flavors wherever the road takes you.
+</p>
+
+</div>
+
+</section>
+
+<section class="menu" id="menu">
+
+<h2>Our Menu</h2>
+
+<div class="menu-items">
+
+<div class="item">
+<h3>☕ Cappuccino</h3>
+<p>Fresh creamy coffee</p>
+<div class="price">AED 150</div>
+</div>
+
+<div class="item">
+<h3>🍓 Strawberry Shake</h3>
+<p>Sweet & refreshing</p>
+<div class="price">AED 180</div>
+</div>
+
+<div class="item">
+<h3>🥐 Butter Croissant</h3>
+<p>Fresh bakery delight</p>
+<div class="price">AED 120</div>
+</div>
+
+<div class="item">
+<h3>🍰 Pink Velvet Cake</h3>
+<p>Soft & creamy</p>
+<div class="price">AED 220</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="gallery">
+
+<h2>Our Cafe Moments</h2>
+
+<div class="gallery-images">
+
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+<img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814">
+<img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Ghop Ghop On The Road • Made by JP</p>
+
+</footer>
+
+<script>
+
+function scrollMenu(){
+document.getElementById("menu").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+</script>
+
+</body>
+</html>
+
